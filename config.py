@@ -23,18 +23,18 @@ IMAGE_HEIGHT = 1440
 # ─── PINTEREST BOARDS ─────────────────────────────────────────────────────────
 # Fill in board IDs after creating boards on Pinterest
 BOARDS = {
-    'living'    : '',
-    'bedroom'   : '',
-    'kitchen'   : '',
-    'bathroom'  : '',
-    'office'    : '',
-    'budget'    : '',
-    'luxury'    : '',
-    'wall_art'  : '',
-    'small_space': '',
-    'cozy'      : '',
-    'general'   : '',
-    'amazon'    : '',
+    'living'    : '1144829236467500689',  # Living Room Decor Ideas
+    'bedroom'   : '1144829236467500690',  # Bedroom Decor Inspiration
+    'budget'    : '1144829236467500691',  # Home Decor on a Budget
+    'wall_art'  : '1144829236467500693',  # Wall Art & Gallery Wall Ideas
+    'cozy'      : '1144829236467500696',  # Cozy Home Aesthetic
+    'kitchen'   : '1144829236467500699',  # Kitchen & Dining Decor
+    'boho'      : '1144829236467500703',  # Boho Home Decor
+    'luxury'    : '1144829236467500706',  # Luxury Home Decor Finds
+    'office'    : '1144829236467500708',  # Home Office Decor
+    'outdoor'   : '1144829236467500709',  # Outdoor & Patio Decor
+    'general'   : '1144829236467500689',  # fallback → Living Room
+    'amazon'    : '1144829236467500691',  # fallback → Budget
 }
 
 # ─── PINTEREST TOPIC TAGS ─────────────────────────────────────────────────────
