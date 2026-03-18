@@ -697,7 +697,7 @@
         "cozy_home"
       ],
       "category": "living",
-      "image_url": "images\\blog3_pin8.jpg",
+      "image_url": "https://raw.githubusercontent.com/Saiteja9989/pinterest-automation/main/images/blog3_pin8.jpg",
       "posted": false,
       "blog_number": 3
     },
