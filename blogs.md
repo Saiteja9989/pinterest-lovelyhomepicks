@@ -9,8 +9,8 @@
 
 | # | Blog Title | Status |
 |---|---|---|
-| 1 | 9 Best Area Rugs Under $150 That Look Way More Expensive (2026 Amazon Picks) | ⬜ Pending |
-| 2 | 7 Statement Throw Pillows That Will Transform Your Living Room in 2026 | ⬜ Pending |
+| 1 | 9 Best Area Rugs Under $150 That Look Way More Expensive (2026 Amazon Picks) | ✅ Done |
+| 2 | 7 Statement Throw Pillows That Will Transform Your Living Room in 2026 | ✅ Done |
 | 3 | The 8 Best Floor Lamps for Living Rooms — Ranked by Style and Brightness | ⬜ Pending |
 | 4 | 10 Affordable Accent Chairs That Look Like They Cost $500 (Amazon 2026) | ⬜ Pending |
 | 5 | 6 Best Faux Plants That Look Incredibly Real — No Maintenance Required | ⬜ Pending |
