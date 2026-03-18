@@ -895,20 +895,20 @@ FOR EACH PIN GENERATE:
 5. freepik_prompt — A complete Seedream 4.5 AI image generation prompt for a PREMIUM Pinterest pin.
      RULES for freepik_prompt:
      - Start with: "Pinterest pin, portrait 2:3, 1000x1500px."
-     - Describe the EXACT background image using the SPECIFIC product from this blog (not generic "organizer")
-       e.g. "slim stainless steel step trash can beside white lower kitchen cabinet"
-       e.g. "tiered bamboo spice rack with labeled glass jars on marble countertop"
+     - Describe the EXACT background image using the SPECIFIC product from this blog (not generic "home decor")
+       e.g. "plush neutral linen throw pillows styled on a beige sofa, warm afternoon light"
+       e.g. "boho rattan pendant light hanging over a wooden dining table, warm Edison bulb glow"
      - Describe a UNIQUE layout and color scheme matching the pin's angle:
-       * LISTICLE/TOP PICKS → full-bleed product lifestyle photo, dark gradient overlay bottom half, bold white text
-       * HOW-TO → split panel: product photo top, info panel bottom in deep navy or forest green
-       * BOLD STATEMENT → solid vivid color background (pick a color that fits the product), huge typography
-       * KEY INSIGHT/STAT → dark editorial: charcoal bg, gold accent lines, product centered with rim light
-       * PRICE/DEAL → white bg, large colored price badge circle at top, product photo, gold stars, CTA button
-       * CHECKLIST → clean white bg, product photo top, checkmark list rows below
+       * LISTICLE/TOP PICKS → full-bleed lifestyle interior photo, dark gradient overlay bottom half, bold white text
+       * HOW-TO → split panel: styled room photo top, info panel bottom in deep navy or warm terracotta
+       * BOLD STATEMENT → solid vivid or earthy color background (warm sand, sage green, dusty rose), huge typography
+       * KEY INSIGHT/STAT → dark editorial: charcoal bg, gold accent lines, product centered with warm rim light
+       * PRICE/DEAL → white bg, large warm-toned price badge circle at top, product photo, gold stars, CTA button
+       * CHECKLIST → clean white or cream bg, product lifestyle photo top, checkmark list rows below
        * BEFORE/AFTER → vertical split: plain/boring room top half (BEFORE label), beautifully decorated room with product bottom (AFTER label)
-       * PROBLEM/SOLUTION → bold red top band (THE PROBLEM), product photo center, green bottom band (THE SOLUTION)
-       * SOFT/AESTHETIC → soft pastel bg matching product color palette, centered product, elegant italic text
-       * SECOND LISTICLE → magazine cover style: full-bleed photo, white semi-transparent top + bottom bands
+       * PROBLEM/SOLUTION → bold warm red top band (THE PROBLEM), product photo center, sage green bottom band (THE SOLUTION)
+       * SOFT/AESTHETIC → soft pastel or neutral bg matching product palette, centered product, elegant italic script text
+       * SECOND LISTICLE → magazine cover style: full-bleed styled interior photo, white semi-transparent top + bottom bands
      - Include text overlays: describe EXACTLY what text appears where on the image, using line1/line2/line3 values
      - Include: "Small text 'lovelyhomepicks.com' at bottom"
      - CONTRAST RULE: text color MUST contrast with background — use dark navy/charcoal text on white/light/pastel/soft backgrounds; use white text ONLY on dark backgrounds or when a dark gradient/overlay explicitly covers the text area
@@ -920,15 +920,15 @@ FOR EACH PIN GENERATE:
 ════════════════════════════════════════
 
 Pin 1:  LISTICLE — "X Best [exact product type]..." (use actual count from blog)
-Pin 2:  LISTICLE 2 — Different angle on same products (budget / small space / top-rated)
-Pin 3:  HOW-TO — "How to [specific task with this exact product]"
-Pin 4:  BOLD STATEMENT — Attention-grabbing question or hook about THIS product
-Pin 5:  KEY INSIGHT — Surprising stat or fact found in the blog
-Pin 6:  STAT/PRICE — Lead with exact cheapest price ({cheapest_price}) from the product list
-Pin 7:  CHECKLIST — "Before You Buy: [product type] Checklist"
-Pin 8:  BEFORE/AFTER — Messy space vs organized with THIS product
-Pin 9:  PROBLEM/SOLUTION — Specific pain point + this blog's solution
-Pin 10: SOFT/ASPIRATIONAL — Emotional or aesthetic angle on THIS product
+Pin 2:  LISTICLE 2 — Different styling angle on same products (budget / boho / luxury look)
+Pin 3:  HOW-TO — "How to Style [specific product] in Your [room]"
+Pin 4:  BOLD STATEMENT — Attention-grabbing design truth or hook about THIS product
+Pin 5:  KEY INSIGHT — Surprising styling tip or decor fact found in the blog
+Pin 6:  STAT/PRICE — Lead with exact cheapest price ({cheapest_price}) — "Transform Your Room for Only {cheapest_price}"
+Pin 7:  CHECKLIST — "Before You Buy: [product type] Style Checklist"
+Pin 8:  BEFORE/AFTER — Plain boring room vs beautifully decorated with THIS product
+Pin 9:  PROBLEM/SOLUTION — Specific home styling pain point + this blog's solution
+Pin 10: SOFT/ASPIRATIONAL — Dreamy aesthetic or emotional angle on THIS product
 
 ════════════════════════════════════════
 RETURN ONLY VALID JSON — no explanation, no markdown fences
@@ -938,15 +938,15 @@ RETURN ONLY VALID JSON — no explanation, no markdown fences
     {{
       "pin_number": 1,
       "pin_type": "listicle",
-      "title": "9 Trash Can Organizers That Actually Fit Small Kitchens — Amazon 2026",
-      "description": "Tight on space? These 9 trash can organizers fit under cabinets, inside drawers, or slim beside appliances — all under $40 on Amazon with thousands of 5-star reviews. #KitchenOrganization #TrashCan #SmallKitchen #AmazonFinds #HomeOrganization Save this pin!",
+      "title": "9 Best Area Rugs Under $150 That Look Way More Expensive — Amazon 2026",
+      "description": "Transform your living room instantly with one of these 9 stunning area rugs — all under $150 on Amazon with thousands of 5-star reviews. From boho jute to plush neutrals, there's a style for every home. #HomeDecor #AreaRug #LivingRoomDecor #AmazonFinds #InteriorDesign Save this pin!",
       "text_on_pin": {{
-        "line1": "9 TRASH CANS TESTED",
-        "line2": "FITS ANY KITCHEN SIZE",
-        "line3": "SHOP AMAZON NOW"
+        "line1": "9 RUGS THAT LOOK $500",
+        "line2": "ALL UNDER $150 AMAZON",
+        "line3": "SHOP THE LIST"
       }},
       "board": "{category}",
-      "freepik_prompt": "Pinterest pin, portrait 2:3, 1000x1500px. Background: full-bleed photorealistic lifestyle photo of slim stainless steel step trash can placed beside white lower kitchen cabinet, pull-out dual-bin trash organizer partially visible inside open cabinet door, warm natural window light from left, clean marble countertops, no people, styled minimal kitchen. Dark-to-transparent gradient overlay from bottom 55% upward. On gradient: bold large white uppercase sans-serif text '9 TRASH CANS TESTED' centered, letter-spacing 3px. White medium text 'FITS ANY KITCHEN SIZE' below. White small text 'SHOP AMAZON NOW' with right-arrow. Solid navy rounded-pill badge bottom center: small white text 'lovelyhomepicks.com'. High-resolution editorial lifestyle photography, Canva hero pin style."
+      "freepik_prompt": "Pinterest pin, portrait 2:3, 1000x1500px. Background: full-bleed photorealistic lifestyle photo of a beautiful neutral toned area rug centered in a bright airy living room, plush neutral sofa visible above with layered throw pillows, warm afternoon window light, herringbone wood floor, no people, styled minimal Scandinavian interior. Dark-to-transparent gradient overlay from bottom 55% upward. On gradient: bold large white uppercase sans-serif text '9 RUGS THAT LOOK $500' centered, letter-spacing 3px. White medium text 'ALL UNDER $150 AMAZON' below. White small text 'SHOP THE LIST' with right-arrow. Solid warm navy rounded-pill badge bottom center: small white text 'lovelyhomepicks.com'. High-resolution editorial lifestyle photography, Canva hero pin style."
     }}
   ]
 }}"""
