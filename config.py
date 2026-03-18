@@ -39,16 +39,18 @@ BOARDS = {
 
 # ─── PINTEREST TOPIC TAGS ─────────────────────────────────────────────────────
 TOPIC_TAGS = {
-    'living'    : ['home_decor', 'interior_design', 'living_room', 'furniture', 'home_improvement'],
+    'living'    : ['home_decor', 'interior_design', 'living_room', 'furniture', 'cozy_home'],
     'bedroom'   : ['home_decor', 'interior_design', 'bedroom', 'bedroom_decor', 'cozy_home'],
-    'kitchen'   : ['home_decor', 'kitchen', 'kitchen_design', 'interior_design', 'home_improvement'],
-    'bathroom'  : ['home_decor', 'bathroom', 'bathroom_decor', 'interior_design', 'home_improvement'],
-    'office'    : ['home_decor', 'home_office', 'interior_design', 'productivity', 'office_decor'],
-    'budget'    : ['home_decor', 'budget_decorating', 'interior_design', 'affordable_home', 'diy_and_crafts'],
+    'kitchen'   : ['home_decor', 'kitchen', 'kitchen_design', 'interior_design', 'dining_room'],
+    'bathroom'  : ['home_decor', 'bathroom', 'bathroom_decor', 'interior_design', 'spa'],
+    'office'    : ['home_decor', 'home_office', 'interior_design', 'office_decor', 'productivity'],
+    'budget'    : ['home_decor', 'budget_decorating', 'interior_design', 'affordable_home', 'amazon_finds'],
     'luxury'    : ['home_decor', 'luxury_home', 'interior_design', 'dream_home', 'home_inspiration'],
     'wall_art'  : ['home_decor', 'wall_art', 'interior_design', 'gallery_wall', 'art'],
-    'small_space': ['home_decor', 'small_space', 'interior_design', 'apartment_decor', 'space_saving'],
     'cozy'      : ['home_decor', 'cozy_home', 'interior_design', 'hygge', 'home_inspiration'],
+    'boho'      : ['home_decor', 'boho_decor', 'interior_design', 'bohemian', 'natural_home'],
+    'outdoor'   : ['home_decor', 'outdoor_decor', 'patio', 'garden', 'outdoor_living'],
+    'lighting'  : ['home_decor', 'interior_design', 'lighting', 'home_lighting', 'ambiance'],
     'general'   : ['home_decor', 'interior_design', 'home_inspiration', 'dream_home', 'home_improvement'],
     'amazon'    : ['home_decor', 'amazon_finds', 'interior_design', 'budget_decorating', 'home_improvement'],
 }

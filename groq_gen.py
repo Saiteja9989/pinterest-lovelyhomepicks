@@ -170,6 +170,11 @@ def extract_product_type(blog_title):
         'counter', 'countertop', 'countertops', 'cabinet', 'cabinets',
         'drawer', 'drawers', 'closet', 'closets', 'shelf', 'shelves',
         'small', 'zero', 'without', 'limited', 'tiny', 'rental', 'apartment',
+        # home decor niche — descriptive/style words, not product names
+        'decor', 'design', 'style', 'styled', 'stylish', 'aesthetic', 'beautiful',
+        'stunning', 'gorgeous', 'elegant', 'inspired', 'inspiration',
+        'look', 'looks', 'looking', 'transform', 'elevate', 'refresh', 'makeover',
+        'ideas', 'idea', 'guide', 'ways', 'tips',
     }
     words = _re.findall(r'[a-zA-Z]+', title.lower())
     product_words = [w for w in words if len(w) >= 4 and w not in skip]
@@ -500,12 +505,12 @@ def ask_groq(prompt, max_tokens=4096, json_mode=False):
 
 
 BLOG_INTRO_HOOKS = [
-    # Hook 0 — Problem/frustration opener (standard)
-    "Hook with a relatable frustration the reader faces right now. Use <strong> for key phrases. End paragraph 2 with: \"I spent hours researching the top-rated, most-reviewed products on Amazon to bring you this ranked list.\"",
-    # Hook 1 — Personal story opener
-    "Open with a short first-person story: 'Last month I finally tackled my [specific space]...' Make it relatable and conversational. Reveal the solution at the end of paragraph 2. End with: \"After testing and reading thousands of Amazon reviews, here are the only products worth your money.\"",
-    # Hook 2 — Surprising statistic or question opener
-    "Open with a surprising question or bold statement (e.g. 'Most people waste $40 on [product] that breaks in 3 months.'). Build tension in paragraph 1. End paragraph 2 with: \"I ranked every top-rated option on Amazon so you don't have to waste another dollar.\"",
+    # Hook 0 — Home styling frustration opener
+    "Hook with a relatable home styling frustration the reader faces. Use <strong> for key phrases. End paragraph 2 with: \"I spent hours searching Amazon to find the most beautiful, best-reviewed options so you don't have to.\"",
+    # Hook 1 — Personal room transformation story
+    "Open with a short first-person story about transforming a room: 'Last month I completely changed my living room with just a few key pieces...' Make it visual and inspiring. End with: \"After researching hundreds of products and reading thousands of reviews, here are the only pieces worth your money.\"",
+    # Hook 2 — Bold style statement opener
+    "Open with a bold style statement or surprising home decor insight (e.g. 'The right rug can make a $500 sofa look like it cost $2000.'). Build excitement in paragraph 1. End paragraph 2 with: \"I ranked every top-rated option on Amazon so you can shop with confidence.\"",
 ]
 
 def generate_blog_html(blog_title, category, products, blog_number=1):
@@ -571,7 +576,7 @@ SECTION 2 — INTRO (3 paragraphs, 180–220 words total)
 {intro_hook}
 - Paragraph 1: Hook with a relatable frustration US homeowners face about {product_type}s. Use <strong> for 2–3 key phrases. Make it feel real and specific.
 - Paragraph 2: Why this matters in 2026 — mention the specific problem this product solves. Mention Amazon naturally.
-- Paragraph 3 must end with: "I spent hours researching thousands of Amazon reviews to bring you this ranked list — updated March 2026."
+- Paragraph 3 must end with: "I spent hours curating the most beautiful, best-reviewed home decor finds on Amazon to bring you this styled list — updated March 2026."
 
 SECTION 3 — QUICK ANSWER BOX
 <div style="background:#e3f2fd;border-left:5px solid #1976d2;padding:16px 20px;margin:24px 0;border-radius:6px">
@@ -579,8 +584,8 @@ SECTION 3 — QUICK ANSWER BOX
 </div>
 
 SECTION 4 — BUYER'S GUIDE
-<h2>What to Look for in a {product_type.title()} (2026 Buyer's Guide)</h2>
-Write 4 buying criteria specific to {product_type}. Each criterion:
+<h2>How to Choose the Perfect {product_type.title()} for Your Home (2026 Guide)</h2>
+Write 4 style and quality criteria specific to {product_type} for home decor. Each criterion:
 <h3>[Specific criterion name]</h3>
 <p>2–3 sentences — include real measurements, materials, or use-case scenarios specific to this product type</p>
 
@@ -633,7 +638,7 @@ For EACH of the {n} products, write this HTML block with REAL content (no bracke
 <hr style="margin:32px 0;border:none;border-top:1px solid #ececec">
 
 SECTION 7 — PRO TIPS
-<h2>5 Pro Tips to Get the Most Out of Your {product_type.title()}</h2>
+<h2>5 Styling Tips to Make Your {product_type.title()} Look Even Better</h2>
 <ol>
 Write 5 actionable tips. Each: <li><strong>[Tip Name]:</strong> 2 practical sentences relevant to this specific product type for US households.</li>
 </ol>
@@ -900,7 +905,7 @@ FOR EACH PIN GENERATE:
        * KEY INSIGHT/STAT → dark editorial: charcoal bg, gold accent lines, product centered with rim light
        * PRICE/DEAL → white bg, large colored price badge circle at top, product photo, gold stars, CTA button
        * CHECKLIST → clean white bg, product photo top, checkmark list rows below
-       * BEFORE/AFTER → vertical split: cluttered room top half (BEFORE label), organized with product bottom (AFTER label)
+       * BEFORE/AFTER → vertical split: plain/boring room top half (BEFORE label), beautifully decorated room with product bottom (AFTER label)
        * PROBLEM/SOLUTION → bold red top band (THE PROBLEM), product photo center, green bottom band (THE SOLUTION)
        * SOFT/AESTHETIC → soft pastel bg matching product color palette, centered product, elegant italic text
        * SECOND LISTICLE → magazine cover style: full-bleed photo, white semi-transparent top + bottom bands
@@ -988,9 +993,16 @@ RETURN ONLY VALID JSON — no explanation, no markdown fences
                 pins_data = []
 
     board_map = {
-        category: default_board,
-        'budget':  budget_board,
-        'amazon':  amazon_board,
+        category:    default_board,
+        'budget':    budget_board,
+        'amazon':    amazon_board,
+        'boho':      BOARDS.get('boho',     default_board),
+        'outdoor':   BOARDS.get('outdoor',  default_board),
+        'wall':      BOARDS.get('wall_art', default_board),
+        'wall_art':  BOARDS.get('wall_art', default_board),
+        'lighting':  BOARDS.get('living',   default_board),
+        'cozy':      BOARDS.get('cozy',     default_board),
+        'luxury':    BOARDS.get('luxury',   default_board),
     }
 
     pins = []
