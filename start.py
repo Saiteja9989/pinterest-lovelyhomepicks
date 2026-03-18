@@ -9,7 +9,7 @@ Flow:
   2. Groq suggests N search queries (N from blog title)
   3. ScraperAPI searches Amazon for each query → picks top product
   4. Scrapes product details (name, price, rating, image)
-  5. Builds affiliate link: amazon.com/dp/{ASIN}?tag=lovelyhomepicks-20
+  5. Builds affiliate link: amazon.com/dp/{ASIN}?tag=smarthomeorg-20
   6. Writes blog_input.json — no manual steps
   7. Generates blog HTML → uploads to Blogger
   8. Generates 10 pins + images → adds to pins_queue_new.json
@@ -29,7 +29,7 @@ from config import GROQ_API_KEY, GROQ_MODEL, SCRAPER_API_KEY, GEMINI_API_KEY
 BLOGS_FILE     = 'blogs.md'
 INPUT_FILE     = 'blog_input.json'
 GROQ_URL       = "https://api.groq.com/openai/v1/chat/completions"
-AMAZON_TAG     = "lovelyhomepicks-20"  # shared tag for all niches
+AMAZON_TAG     = "smarthomeorg-20"  # shared tag for all niches
 SCRAPER_BASE   = "http://api.scraperapi.com"
 
 # Words describing blog angle/style — not product identifiers
