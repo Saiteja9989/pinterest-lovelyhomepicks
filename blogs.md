@@ -11,8 +11,8 @@
 |---|---|---|
 | 1 | 9 Best Area Rugs Under $150 That Look Way More Expensive (2026 Amazon Picks) | ✅ Done |
 | 2 | 7 Statement Throw Pillows That Will Transform Your Living Room in 2026 | ✅ Done |
-| 3 | 8 Best Floor Lamps That Interior Designers Use to Transform a Living Room | ✅ Done |
-| 4 | 10 Designer Accent Chairs That Are Actually Worth Buying (Amazon 2026) | ✅ Done |
+| 3 | 8 Best Floor Lamps That Interior Designers Use to Transform a Living Room | ✅ Done|
+| 4 | 10 Designer Accent Chairs That Are Actually Worth Buying (Amazon 2026) | ⬜ Pending|
 | 5 | 6 Best Large Faux Botanicals That Look Indistinguishable From Real Plants | ⬜ Pending |
 | 6 | 9 Large Statement Wall Art Pieces That Make a Real Design Impact | ⬜ Pending |
 | 7 | 7 Best Luxury Throw Blankets That Feel Like a Five-Star Hotel (Amazon 2026) | ⬜ Pending |
