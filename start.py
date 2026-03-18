@@ -9,7 +9,7 @@ Flow:
   2. Groq suggests N search queries (N from blog title)
   3. ScraperAPI searches Amazon for each query → picks top product
   4. Scrapes product details (name, price, rating, image)
-  5. Builds affiliate link: amazon.com/dp/{ASIN}?tag=smarthomeorg-20
+  5. Builds affiliate link: amazon.com/dp/{ASIN}?tag=lovelyhomepicks-20
   6. Writes blog_input.json — no manual steps
   7. Generates blog HTML → uploads to Blogger
   8. Generates 10 pins + images → adds to pins_queue_new.json
@@ -29,7 +29,7 @@ from config import GROQ_API_KEY, GROQ_MODEL, SCRAPER_API_KEY, GEMINI_API_KEY
 BLOGS_FILE     = 'blogs.md'
 INPUT_FILE     = 'blog_input.json'
 GROQ_URL       = "https://api.groq.com/openai/v1/chat/completions"
-AMAZON_TAG     = "smarthomeorg-20"
+AMAZON_TAG     = "lovelyhomepicks-20"  # shared tag for all niches
 SCRAPER_BASE   = "http://api.scraperapi.com"
 
 # Words describing blog angle/style — not product identifiers
@@ -88,37 +88,32 @@ def get_topic_keywords(blog_title, category=''):
 
 
 CATEGORY_KEYWORDS = {
-    'kitchen' : ['kitchen', 'pantry', 'drawer', 'spice', 'refrigerator', 'fridge',
-                 'cabinet', 'countertop', 'counter', 'coffee station', 'cutting board',
-                 'utensil', 'lazy susan', 'pot', 'pan', 'food container', 'stackable'],
-    'bathroom': ['bathroom', 'shower', 'makeup', 'skincare', 'toilet', 'hair tool',
-                 'medicine cabinet', 'towel', 'toiletry', 'vanity'],
-    'bedroom' : ['closet', 'bedroom', 'dresser', 'under bed', 'jewelry', 'shoe rack',
-                 'wardrobe', 'nightstand', 'velvet hanger', 'scarf', 'purse'],
-    'spring'  : ['spring clean', 'spring cleaning', 'declutter'],
-    'office'  : ['desk', 'home office', 'file organizer', 'cable', 'cord'],
-    'living'  : ['living room', 'coffee table', 'entryway', 'ottoman'],
-    'kids'    : ['kids', 'toy', 'nursery', 'baby', 'playroom'],
-    'laundry' : ['laundry', 'linen closet', 'mudroom'],
-    'garage'  : ['garage', 'tool', 'bike'],
+    'living'   : ['sofa', 'couch', 'coffee table', 'throw pillow', 'area rug', 'rug', 'curtain',
+                  'accent chair', 'living room', 'bookshelf', 'ottoman', 'side table', 'lamp'],
+    'bedroom'  : ['bedroom', 'bedding', 'duvet', 'comforter', 'throw blanket', 'nightstand',
+                  'headboard', 'dresser', 'mirror', 'vanity', 'bed frame', 'pillow'],
+    'kitchen'  : ['kitchen', 'dining', 'table runner', 'centerpiece', 'candle', 'pendant light',
+                  'bar stool', 'kitchen decor', 'kitchen curtain'],
+    'bathroom' : ['bathroom', 'bath mat', 'towel', 'shower curtain', 'bath decor', 'vanity mirror'],
+    'office'   : ['desk', 'home office', 'office decor', 'desk lamp', 'bookcase'],
+    'wall'     : ['wall art', 'gallery wall', 'wall decor', 'picture frame', 'canvas print', 'tapestry'],
+    'lighting' : ['lamp', 'pendant', 'chandelier', 'sconce', 'floor lamp', 'table lamp', 'string light'],
+    'outdoor'  : ['patio', 'outdoor', 'garden', 'outdoor furniture', 'outdoor rug', 'planter'],
+    'general'  : ['home decor', 'interior design', 'aesthetic', 'cozy home', 'home styling'],
 }
 
 # Words that disqualify a product from a category.
 # e.g. a kitchen blog must NOT get makeup/bathroom/office/garage products.
 CATEGORY_EXCLUSIONS = {
-    'kitchen' : ['makeup', 'lipstick', 'cosmetic', 'perfume', 'skincare', 'lotion',
-                 'vanity', 'bathroom', 'shower', 'toilet', 'hair dryer', 'nail',
-                 'business card', 'filing cabinet', 'office supply', 'binder',
-                 'drill', 'garage', 'tool organizer', 'power tool', 'bike',
-                 'jewelry', 'shoe', 'wardrobe', 'closet', 'bedroom',
-                 'laundry', 'linen', 'mudroom'],
-    'bathroom': ['kitchen', 'pantry', 'food', 'cookware', 'garage', 'office',
-                 'closet', 'bedroom', 'toy', 'laundry'],
-    'bedroom' : ['kitchen', 'pantry', 'bathroom', 'toilet', 'shower', 'garage',
-                 'office', 'toy', 'laundry'],
-    'office'  : ['kitchen', 'pantry', 'bathroom', 'garage', 'toy', 'laundry',
-                 'bedroom', 'closet'],
-    'garage'  : ['kitchen', 'bathroom', 'bedroom', 'office', 'toy', 'laundry'],
+    'living'   : ['garage', 'tool', 'drill', 'outdoor furniture', 'patio', 'garden'],
+    'bedroom'  : ['kitchen', 'garage', 'outdoor', 'patio'],
+    'kitchen'  : ['bedroom', 'bathroom', 'garage', 'outdoor', 'tool'],
+    'bathroom' : ['kitchen', 'garage', 'outdoor', 'tool', 'bedroom'],
+    'office'   : ['kitchen', 'bathroom', 'garage', 'outdoor', 'tool'],
+    'wall'     : ['garage', 'tool', 'outdoor', 'kitchen'],
+    'lighting' : ['garage', 'tool', 'outdoor furniture'],
+    'outdoor'  : ['bedroom', 'kitchen', 'bathroom'],
+    'general'  : [],
 }
 
 
@@ -503,7 +498,7 @@ def search_and_scrape(query, used_asins=None, topic_keywords=None, max_price=Non
 
 def run():
     print("\n" + "=" * 62)
-    print("  SMART HOME ORGANIZING — FULL AUTOMATION")
+    print("  LOVELY HOME PICKS — FULL AUTOMATION")
     print("=" * 62)
 
     # ── STEP 1: Read blog ────────────────────────────────────────────────────

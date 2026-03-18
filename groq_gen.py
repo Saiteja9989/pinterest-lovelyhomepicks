@@ -51,111 +51,101 @@ def ask_gemini(prompt, temperature=0.5, max_tokens=8192, grounding=True):
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-WEBSITE = "smarthomeorganizing.com"
+WEBSITE = "lovelyhomepicks.com"
 
 # ─── Map blog title keywords → specific room phrase for Freepik prompts ───────
 TOPIC_ROOM = {
-    # Kitchen sub-spaces (sorted longest-first for matching priority)
-    'trash can'   : 'kitchen trash area',
-    'trash bin'   : 'kitchen trash area',
-    'garbage can' : 'kitchen trash area',
-    'pull-out trash': 'kitchen trash area',
-    'under counter': 'kitchen trash area',
-    'pantry door' : 'pantry door',
-    'under sink'  : 'under-sink cabinet',
-    'lazy susan'  : 'kitchen turntable cabinet',
-    'food container': 'kitchen pantry',
-    'refrigerator': 'refrigerator',
-    'countertop'  : 'kitchen countertop',
-    'countertops' : 'kitchen countertop',
-    'fridge'      : 'refrigerator',
-    'freezer'     : 'freezer',
-    'cabinet'     : 'kitchen cabinet',
-    'pantry'      : 'pantry',
-    'drawer'      : 'kitchen drawer',
-    'drawers'     : 'kitchen drawer',
-    'counter'     : 'kitchen countertop',
-    'spice'       : 'spice cabinet',
-    'pot'         : 'pot and pan cabinet',
-    'shelf'       : 'kitchen shelf',
-    'shelves'     : 'kitchen shelf',
-    # Bathroom
-    'medicine'    : 'medicine cabinet',
-    'makeup'      : 'makeup vanity',
-    'vanity'      : 'bathroom vanity',
-    'shower'      : 'shower',
-    'bathroom'    : 'bathroom',
-    'toilet'      : 'bathroom',
-    'hair'        : 'bathroom styling station',
-    # Bedroom
-    'under bed'   : 'under-bed storage',
-    'closet'      : 'closet',
-    'wardrobe'    : 'wardrobe',
-    'dresser'     : 'dresser',
-    'jewelry'     : 'jewelry vanity',
-    'shoe'        : 'shoe storage area',
-    'bedroom'     : 'bedroom',
-    # Office
-    'cable'       : 'desk cable management',
-    'cord'        : 'desk cord area',
-    'desk'        : 'home office desk',
-    'file'        : 'home office',
-    # Living / Entryway
-    'coffee table': 'living room',
-    'entryway'    : 'entryway',
+    # Living room
+    'sofa'        : 'living room',
+    'couch'       : 'living room',
+    'coffee table': 'living room coffee table',
+    'throw pillow': 'living room',
+    'area rug'    : 'living room',
+    'rug'         : 'living room',
+    'curtain'     : 'living room',
+    'drape'       : 'living room',
+    'accent chair': 'living room',
     'living room' : 'living room',
-    'toy'         : 'playroom',
-    'toys'        : 'playroom',
-    # Laundry / Garage
+    'bookshelf'   : 'living room bookshelf',
+    'bookcase'    : 'living room bookshelf',
+    # Bedroom
+    'bedding'     : 'bedroom',
+    'duvet'       : 'bedroom',
+    'comforter'   : 'bedroom',
+    'throw blanket': 'bedroom',
+    'nightstand'  : 'bedroom nightstand',
+    'headboard'   : 'bedroom',
+    'bedroom'     : 'bedroom',
+    'dresser'     : 'bedroom dresser',
+    'mirror'      : 'bedroom mirror',
+    'vanity'      : 'vanity table',
+    # Kitchen & Dining
+    'kitchen'     : 'kitchen',
+    'dining'      : 'dining room',
+    'table runner': 'dining table',
+    'centerpiece' : 'dining table',
+    'candle'      : 'living room',
+    # Bathroom
+    'bathroom'    : 'bathroom',
+    'bath mat'    : 'bathroom',
+    'towel'       : 'bathroom',
+    'shower curtain': 'bathroom',
+    # Home Office
+    'desk'        : 'home office',
+    'office'      : 'home office',
+    # Lighting
+    'lamp'        : 'living room lamp',
+    'pendant'     : 'kitchen pendant light',
+    'chandelier'  : 'dining room chandelier',
+    'sconce'      : 'hallway sconce',
+    'light'       : 'living room',
+    # Wall decor
+    'wall art'    : 'gallery wall',
+    'gallery wall': 'gallery wall',
+    'wall decor'  : 'gallery wall',
+    'picture frame': 'gallery wall',
+    'frame'       : 'gallery wall',
+    # Outdoor
+    'patio'       : 'patio',
+    'outdoor'     : 'patio',
+    'garden'      : 'garden',
+    # General
+    'entryway'    : 'entryway',
+    'hallway'     : 'hallway',
     'mudroom'     : 'mudroom',
-    'linen'       : 'linen closet',
-    'laundry'     : 'laundry room',
-    'garage'      : 'garage',
-    'tool'        : 'garage tool wall',
-    'bike'        : 'garage',
+    'nursery'     : 'nursery',
+    'kids room'   : 'kids room',
 }
 
 # ─── Specific visual scene for each room (used in Freepik prompts) ────────────
-# Makes images look unique per blog topic instead of all being generic "kitchen"
+# Makes images look unique per blog topic instead of all being generic "living room"
 ROOM_VISUAL = {
-    'pantry door'          : 'interior view of pantry door with over-door tiered wire rack organizers holding spice jars, canned goods, and bottles in metal baskets',
-    'pantry'               : 'well-stocked pantry shelves with clear labeled containers, wicker baskets, and organized canned goods on white shelving',
-    'refrigerator'         : 'open refrigerator interior with clear stackable bins on glass shelves, labeled produce drawers, and neatly sorted condiments',
-    'kitchen drawer'       : "bird's-eye view of organized kitchen drawer with bamboo dividers neatly separating utensils, cutlery, and gadgets",
-    'spice cabinet'        : 'pull-out tiered spice drawer insert with two rows of labeled spice jars in perfect alphabetical order',
-    'kitchen countertop'   : 'clean minimalist kitchen countertop with matching canisters, one appliance, and a small tray corralling oils and vinegars',
-    'kitchen cabinet'      : 'open kitchen cabinet with pull-out shelf organizer, stacked matching plates, and labeled pantry containers',
-    'kitchen shelf'        : 'organized floating kitchen shelf with matching labeled containers, cookbooks, and potted herb plants',
-    'kitchen turntable cabinet': 'kitchen corner cabinet open showing lazy susan turntable spinning with organized condiments, oils, and spices on tiered levels',
-    'under-sink cabinet'   : 'organized under-sink cabinet with two-tier sliding shelf system, labeled cleaning spray bottles, and a caddy holder',
-    'pot and pan cabinet'  : 'organized deep cabinet with vertical lid holder rack, pots stacked with pan protectors, and pans hung on inner door',
-    'bathroom vanity'      : 'organized bathroom vanity countertop with acrylic makeup organizer, brush holders, and skincare bottles neatly arranged',
-    'makeup vanity'        : 'aesthetic makeup vanity with acrylic multi-drawer organizer, brush holder, and cosmetics displayed under warm lighting',
-    'shower'               : 'clean shower corner with rust-proof wall-mounted caddy organizer holding shampoo, conditioner, and soap bars on tiered shelves',
-    'bathroom'             : 'organized bathroom with labeled fabric baskets under sink, acrylic toiletry organizer on counter, and towels folded on rack',
-    'medicine cabinet'     : 'open medicine cabinet interior with labeled medicine bottles in small bins, first aid supplies sorted, and vitamins in clear containers',
-    'bathroom styling station': 'organized bathroom countertop with heat-resistant hair tool holder, blow dryer stored vertically, and styling products in caddy',
-    'closet'               : 'organized walk-in closet with matching slim velvet hangers, labeled fabric shelf bins, and shoe rack visible on floor',
-    'wardrobe'             : 'organized wardrobe interior with color-coordinated hanging clothes on matching hangers, folded sweaters on shelves, labeled bins',
-    'dresser'              : "bird's-eye view of opened dresser drawer with velvet drawer dividers separating neatly folded t-shirts, socks, and underwear",
-    'under-bed storage'    : 'under-bed area showing slim wheeled storage containers being pulled out, labeled by season, maximizing floor space',
-    'jewelry vanity'       : 'jewelry organizer on dressing table with earring display stand, ring dish, necklace hooks, and tiered bracelet holder',
-    'shoe storage area'    : 'organized shoe rack with pairs aligned by color, clear stackable shoe boxes with photo labels on front',
-    'bedroom'              : 'cozy organized bedroom with nightstand organizer tray, closet partially visible showing hanging pockets and labeled bins',
-    'home office desk'     : 'organized home office desk with vertical file holder, cable management box, multi-compartment desk organizer, and plant',
-    'desk cable management': 'clean desk setup with all cables routed through cable management spine, velcro ties, and mounted power strip hidden from view',
-    'desk cord area'       : 'desk with zero visible cords — all cables managed through cord clips, box organizer, and adhesive cable holders',
-    'home office'          : 'organized home office with upright file folder organizer, labeled color-coded folders, desk drawer with supply caddy',
-    'living room'          : 'organized living room with storage ottoman open showing folded blankets, floating shelves with labeled decorative baskets',
-    'entryway'             : 'organized entryway with wall-mounted key hook rack, mail sorter, slim shoe rack, and labeled fabric cubby bins',
-    'playroom'             : 'colorful organized playroom with labeled toy bins on low white shelves, rolling art cart, and labeled toy chest',
-    'mudroom'              : 'organized mudroom with labeled cubbies for each family member, wall hooks for bags and coats, boot tray, bench storage',
-    'linen closet'         : 'organized linen closet with towels folded and stacked in labeled wire bins and sheets in clear labeled storage bags',
-    'laundry room'         : 'organized laundry room with wall-mounted detergent dispenser shelf, labeled sorting bins, and folding station on counter',
-    'garage'               : 'organized garage with pegboard tool wall, labeled clear storage bins on metal shelving, two bikes hung on wall hooks',
-    'garage tool wall'     : 'pegboard wall with outlined tool silhouettes, double-hook holders for hammers and pliers, labeled bin accessories row',
-    'kitchen'              : 'organized bright white kitchen with matching labeled containers on open shelves, clear countertops, and visible organized cabinet',
-    'kitchen trash area'   : 'modern organized kitchen showing a sleek stainless steel step trash can beside cabinets, pull-out under-cabinet trash bin visible, clean white kitchen background with natural light',
+    'living room'           : 'bright airy living room with plush neutral sofa, layered throw pillows, woven area rug, and a styled coffee table with candles and books',
+    'living room coffee table': 'styled living room coffee table with a tray, stack of books, small candle, and fresh flower stems, natural light from side window',
+    'living room bookshelf' : 'beautifully styled bookshelf with curated books, small plants, ceramic vases, and decorative objects arranged in an aesthetically pleasing way',
+    'living room lamp'      : 'cozy living room corner with a linen-shade floor lamp casting warm light over an armchair with a throw blanket and side table',
+    'bedroom'               : 'serene bedroom with crisp white linen bedding, layered Euro pillows, a wooden nightstand with a lamp and small plant, warm morning light',
+    'bedroom nightstand'    : 'styled bedside nightstand with a modern lamp, stack of books, small succulent plant, and a glass of water on a marble tray',
+    'bedroom dresser'       : 'elegant bedroom dresser top styled with a mirror, small tray with perfume bottles, a candle, and a small potted plant',
+    'bedroom mirror'        : 'full-length mirror leaning against a bedroom wall, reflecting a beautifully made bed with layered pillows and a cozy throw',
+    'vanity table'          : 'elegant vanity table with a round mirror, small tray of perfumes, fresh flowers in a bud vase, warm vanity lighting',
+    'kitchen'               : 'bright white kitchen with open shelving styled with matching canisters, a fruit bowl, and a vase of fresh herbs on the counter',
+    'dining room'           : 'inviting dining room with a round wooden table, cane-back chairs, a linen table runner, and a low floral centerpiece',
+    'dining table'          : 'beautifully set dining table with a linen runner, ceramic candle holders, a small vase of flowers, and artisan placemats',
+    'dining room chandelier': 'elegant dining room with a statement rattan chandelier over a farmhouse table, warm Edison bulb glow, high ceilings',
+    'bathroom'              : 'spa-like bathroom with rolled white towels, a wooden bath tray over the tub with candles and a small plant, clean and serene',
+    'bathroom mirror'       : 'modern bathroom with a frameless LED mirror over a marble vanity, small potted plant beside the sink, warm light',
+    'home office'           : 'cozy home office desk with a neutral linen chair, a small plant, a ceramic pen holder, a wooden desk lamp, and a framed print on the wall',
+    'gallery wall'          : 'styled gallery wall with an artful mix of framed prints, abstract art, and a small shelf with a plant, in a neutral living room',
+    'entryway'              : 'welcoming entryway with a console table, a round mirror above it, a vase with dried pampas grass, and a woven basket beneath',
+    'hallway'               : 'bright hallway with a gallery wall of framed art, a small console table with a lamp and plant, warm wood flooring',
+    'hallway sconce'        : 'elegant hallway with wall sconces casting warm light, a console table below with a vase and decorative object',
+    'patio'                 : 'inviting outdoor patio with a rattan loveseat, outdoor throw pillows, a lantern on the coffee table, and string lights overhead',
+    'garden'                : 'lush garden patio with potted plants, a wooden bistro table and chairs, and string lights in the background at golden hour',
+    'nursery'               : 'soft pastel nursery with a white crib, a knitted throw, a mobile of felt stars, and a glider chair beside a bookshelf with stuffed animals',
+    'kids room'             : 'bright colorful kids room with a low bed, a canopy above it, a small bookshelf with toys, and a playmat on the floor',
+    'mudroom'               : 'clean organized mudroom with a wooden bench, woven baskets below, coat hooks above, and a small potted plant on the bench',
+    'kitchen pendant light' : 'modern kitchen island with two black matte pendant lights hanging overhead, bar stools below, marble countertop, warm ambiance',
 }
 
 
@@ -219,9 +209,9 @@ def get_visual_scene(blog_title, product_type, category):
     print(f"  Room visual: '{room}' not in cache — generating with Gemini...")
     prompt = (
         f'Describe a specific, photorealistic interior scene (1 sentence, max 25 words) for a Pinterest pin about "{blog_title}". '
-        f'The main subject must be "{product_type}" shown organized and in use. '
+        f'The main subject must be "{product_type}" shown styled and in use in a beautiful home setting. '
         f'Focus on the product itself, lighting, and setting. No people. '
-        f'Example format: "organized kitchen countertop with stainless steel step trash can beside white cabinets, warm natural window light"'
+        f'Example format: "styled living room with plush velvet throw pillows on a neutral linen sofa, warm afternoon window light"'
     )
     try:
         scene = ask_gemini(prompt, temperature=0.3, max_tokens=100, grounding=False).strip()
@@ -231,7 +221,7 @@ def get_visual_scene(blog_title, product_type, category):
         return room, scene
     except Exception as e:
         print(f"  Scene generation failed ({e}) — using fallback")
-        return room, f'beautifully organized {category} space featuring {product_type}, clean and tidy with natural lighting'
+        return room, f'beautifully styled {category} space featuring {product_type}, elegant home decor aesthetic with natural lighting'
 
 
 def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, pr2, pr3, r1, r2, r3):
@@ -256,7 +246,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Dark semi-transparent gradient overlay on bottom 40% of image. '
                 f'Bold white sans-serif text reading \'[6-WORD HEADLINE]\' centered on overlay. '
                 f'Smaller white subtext below reading \'STEP BY STEP GUIDE INSIDE\'. '
-                f'Dark navy blue bar at very bottom with white text \'smarthomeorganizing.com\'. '
+                f'Dark navy blue bar at very bottom with white text \'lovelyhomepicks.com\'. '
                 f'Sharp focus, high resolution, real home interior, lifestyle photography.'
             ),
         },
@@ -276,7 +266,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Gold badge on product 2 \'#2 TOP VALUE {pr2}\'. '
                 f'Gold badge on product 3 \'#3 BUDGET {pr3}\'. '
                 f'Row of 5 yellow star icons beside each product. '
-                f'Dark navy blue footer bar at bottom with white text \'smarthomeorganizing.com\'. '
+                f'Dark navy blue footer bar at bottom with white text \'lovelyhomepicks.com\'. '
                 f'Professional product comparison infographic.'
             ),
         },
@@ -294,7 +284,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Clean white background below. Bold black uppercase text reading \'[5-WORD WARNING HEADLINE]\'. '
                 f'Three product images in a horizontal row center. '
                 f'Bold black text \'WE TESTED {n_products} ON AMAZON\'. '
-                f'Dark navy blue footer \'smarthomeorganizing.com\'. '
+                f'Dark navy blue footer \'lovelyhomepicks.com\'. '
                 f'High contrast urgent graphic design style.'
             ),
         },
@@ -311,7 +301,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Top 40% real interior photo of beautifully organized {room} with clear containers, natural light. '
                 f'Bottom 60% clean white section. Bold dark navy sans-serif headline \'[5-WORD TIPS HEADLINE]\'. '
                 f'Clean numbered list in dark text: \'1. [SPECIFIC TIP]\', \'2. [SPECIFIC TIP]\', \'3. [SPECIFIC TIP]\'. '
-                f'Dark navy footer bar \'smarthomeorganizing.com\'. Minimal clean editorial design.'
+                f'Dark navy footer bar \'lovelyhomepicks.com\'. Minimal clean editorial design.'
             ),
         },
         # 4: BEFORE/AFTER
@@ -329,7 +319,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Bottom half: same {room} beautifully organized, clear labeled bins, everything in place, '
                 f'warm light, real interior photo. Bold green label \'AFTER\' bottom-left. '
                 f'Bold white text centered on divider reading \'THIS {pr1} AMAZON PRODUCT DID THIS\'. '
-                f'Dark navy footer \'smarthomeorganizing.com\'. Real interior photography.'
+                f'Dark navy footer \'lovelyhomepicks.com\'. Real interior photography.'
             ),
         },
         # 5: DARK MOODY
@@ -346,7 +336,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Deep shadows on sides, warm golden light highlighting the organized storage. Dark atmospheric aesthetic. '
                 f'Large bold white sans-serif headline centered \'[6-WORD ASPIRATIONAL HEADLINE]\'. '
                 f'Small gold italic text below \'Full Amazon links inside\'. '
-                f'Dark navy footer \'smarthomeorganizing.com\'. '
+                f'Dark navy footer \'lovelyhomepicks.com\'. '
                 f'Cinematic editorial photography, dramatic shadows, high contrast, moody interior.'
             ),
         },
@@ -364,7 +354,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Organized {room} photo below the badge, natural lighting, clear bins visible. '
                 f'Bold black sans-serif text \'[5-WORD DEAL HEADLINE]\'. '
                 f'Row of 5 solid yellow star icons. Small dark text \'{r1}/5 stars from Amazon buyers\'. '
-                f'Dark navy footer \'smarthomeorganizing.com\'. Eye-catching deal graphic design.'
+                f'Dark navy footer \'lovelyhomepicks.com\'. Eye-catching deal graphic design.'
             ),
         },
         # 7: AUTHORITY RANKED — dark editorial magazine style (visually distinct from lifestyle)
@@ -384,7 +374,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Gold award ribbon badge overlaid on center product reading \'AMAZON #1 PICK 2026\'. '
                 f'White bold ranking text below: \'1 — BEST OVERALL  2 — BEST VALUE  3 — BUDGET PICK\'. '
                 f'Row of 5 filled gold star icons with text \'RANKED BY {r1}★ VERIFIED REVIEWS\'. '
-                f'Dark navy footer bar: \'smarthomeorganizing.com\'. '
+                f'Dark navy footer bar: \'lovelyhomepicks.com\'. '
                 f'Premium dark editorial magazine aesthetic, no white space, high contrast typography.'
             ),
         },
@@ -404,7 +394,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Real interior photo of organized {room}, clear bins, neat labels. '
                 f'Three bullet points below photo in clean dark typography: '
                 f'\'• {n1[:20]} {pr1}\', \'• {n2[:20]} {pr2}\', \'• {n3[:20]} {pr3}\'. '
-                f'Dark navy footer \'smarthomeorganizing.com\'. Clean editorial poster.'
+                f'Dark navy footer \'lovelyhomepicks.com\'. Clean editorial poster.'
             ),
         },
         # 9: SOCIAL PROOF
@@ -423,7 +413,7 @@ def _get_style_definitions_UNUSED(room, category, n_products, n1, n2, n3, pr1, p
                 f'Large yellow star rating graphic \'{r1} / 5 STARS\'. '
                 f'White text list: \'{n1[:25]}\', \'{n2[:25]}\', \'{n3[:25]}\'. '
                 f'Bright red rounded rectangle button graphic with white text \'FULL GUIDE + AMAZON LINKS\'. '
-                f'Dark navy footer \'smarthomeorganizing.com\'. Trust and authority graphic.'
+                f'Dark navy footer \'lovelyhomepicks.com\'. Trust and authority graphic.'
             ),
         },
     ]
@@ -436,9 +426,9 @@ def get_trending_keywords(topic, category):
 
     # 1. Google Suggest — always works, no key needed
     queries = [
-        f"best {category} organizer 2026",
-        f"best {category} organization ideas",
-        f"amazon {category} organizer",
+        f"best {category} decor 2026",
+        f"best {category} decor ideas",
+        f"amazon {category} home decor",
     ]
     for q in queries[:2]:
         try:
@@ -457,7 +447,7 @@ def get_trending_keywords(topic, category):
     if PYTRENDS_AVAILABLE and len(suggestions) < 8:
         try:
             pytrends = TrendReq(hl='en-US', tz=360, timeout=(10, 25))
-            kw = f"{category} organizer"
+            kw = f"{category} decor"
             pytrends.build_payload([kw], timeframe='now 7-d', geo='US')
             related = pytrends.related_queries()
             if kw in related and related[kw].get('top') is not None:
@@ -555,7 +545,7 @@ PRODUCT #{i+1} — Label: "{label}"
         for p in products
     ])
 
-    prompt = f"""You are a senior affiliate content writer for smarthomeorganizing.com — a US home organization blog.
+    prompt = f"""You are a senior affiliate content writer for lovelyhomepicks.com — a US home decor blog.
 Write a COMPLETE, professional, SEO-optimized blog post in pure HTML. Every section must be fully written with real, specific content.
 
 ━━━ BLOG INFO ━━━
@@ -563,7 +553,7 @@ Title: "{blog_title}"
 Category: {category}
 Product type: {product_type}
 Target keywords: {blog_title.lower()}, best {product_type} 2026, amazon {product_type}
-Audience: US homeowners aged 28–55 shopping on Amazon, value-conscious, want honest recommendations
+Audience: US homeowners aged 25–55 shopping on Amazon, style-conscious, want beautiful home decor at great value
 Tone: Friendly expert — knowledgeable friend who tested everything, conversational but authoritative
 Date: March 2026
 Word count target: 3000–3800 words
@@ -723,7 +713,7 @@ if False:
         "On gradient: bold large white uppercase sans-serif text '<<L1>>' centered, "
         "letter-spacing 3px. White medium text '<<L2>>' below. "
         "Small white text '<<L3>>' with right-arrow symbol. "
-        "Solid navy blue rounded-pill badge at very bottom center: small white text 'smarthomeorganizing.com'. "
+        "Solid navy blue rounded-pill badge at very bottom center: small white text 'lovelyhomepicks.com'. "
         "High-resolution, editorial lifestyle photography, Canva hero pin style."
     ),
     # split_panel — top product photo, bottom navy text panel
@@ -734,7 +724,7 @@ if False:
         "On navy panel: bold extra-large white uppercase sans-serif text '<<L1>>' at top-center. "
         "Thin yellow #f5c518 horizontal separator line. "
         "White medium-weight text '<<L2>>' below separator. White small text '<<L3>>'. "
-        "Small white text 'smarthomeorganizing.com' at bottom-center. "
+        "Small white text 'lovelyhomepicks.com' at bottom-center. "
         "Crisp line dividing photo and panel. Clean Canva split-panel pin."
     ),
     # dark_editorial — charcoal bg, gold lines, product center
@@ -747,7 +737,7 @@ if False:
         "product isolated on dark background. "
         "Thin gold horizontal rule below product. "
         "White medium sans-serif text '<<L2>>' centered below rule. Gold small text '<<L3>>'. "
-        "Thin gold rule at bottom. Small white text 'smarthomeorganizing.com' below. "
+        "Thin gold rule at bottom. Small white text 'lovelyhomepicks.com' below. "
         "Premium dark editorial magazine aesthetic, luxury feel."
     ),
     # bold_graphic — solid color bg, typography-forward, product card inset
@@ -760,7 +750,7 @@ if False:
         "Inside card: photorealistic product image of <<SCENE>>, white background look, centered. "
         "Inside card below photo: dark navy small text '<<L2>>'. "
         "Below card on orange: white bold text '<<L3>>'. "
-        "Small white text 'smarthomeorganizing.com' at very bottom. "
+        "Small white text 'lovelyhomepicks.com' at very bottom. "
         "Bold graphic, typography-forward, modern Canva pin."
     ),
     # magazine_cover — full-bleed photo, white top band, white bottom panel
@@ -772,7 +762,7 @@ if False:
         "Thin navy rule below white band. "
         "Bottom 28%: white #ffffffee semi-transparent panel. "
         "On bottom panel: dark navy medium sans-serif text '<<L2>>', left-aligned. "
-        "Small dark navy text '<<L3>>'. Small dark text 'smarthomeorganizing.com'. "
+        "Small dark navy text '<<L3>>'. Small dark text 'lovelyhomepicks.com'. "
         "Upscale editorial magazine cover pin, elegant and high-end."
     ),
     # checklist_card — white bg, product top, checklist items
@@ -784,7 +774,7 @@ if False:
         "Thin teal #00897b divider line. "
         "Three checklist rows with teal circle-checkmark icons and dark text (one item per row, left-aligned in center area). "
         "Dark medium text '<<L2>>' below checklist. "
-        "Solid navy footer bar at bottom: white text 'smarthomeorganizing.com' left, white small text '<<L3>>' right. "
+        "Solid navy footer bar at bottom: white text 'lovelyhomepicks.com' left, white small text '<<L3>>' right. "
         "Clean minimal Canva checklist card pin."
     ),
     # price_badge — white bg, red price circle, product, stars, CTA button
@@ -796,7 +786,7 @@ if False:
         "Photorealistic product photo of <<SCENE>>, centered, white background, clean drop shadow. "
         "Row of 5 solid gold star icons. Small dark gray text '<<L2>>'. "
         "Teal #00897b rounded-rectangle button with bold white text '<<L3>>' centered. "
-        "Navy footer bar: white text 'smarthomeorganizing.com'. "
+        "Navy footer bar: white text 'lovelyhomepicks.com'. "
         "Eye-catching deal/price Canva pin."
     ),
     # before_after — vertical split, messy top, organized bottom
@@ -809,7 +799,7 @@ if False:
         "Bottom 44%: same <<ROOM>> beautifully organized with <<SCENE>>, clean, warm light, styled. "
         "Bold green #2e7d32 rounded-pill label 'AFTER' bottom-left corner, white text. "
         "White medium text '<<L2>>' overlaid on bottom section. "
-        "Navy footer bar: white text 'smarthomeorganizing.com', white small text '<<L3>>'. "
+        "Navy footer bar: white text 'lovelyhomepicks.com', white small text '<<L3>>'. "
         "Dramatic split-screen transformation Canva pin."
     ),
     # problem_solution — red top band, white center photo, green bottom band
@@ -818,7 +808,7 @@ if False:
         "Top 28%: solid deep red #b71c1c band. Small white uppercase text 'THE PROBLEM' above bold large white text '<<L1>>'. "
         "Middle 44%: clean white/cream #fafafa background with photorealistic product photo of <<SCENE>>, centered, subtle shadow. "
         "Bottom 28%: solid forest green #1b5e20 band. Small white uppercase text 'THE SOLUTION' above bold large white text '<<L2>>'. "
-        "Small white text '<<L3>>'. Small white text 'smarthomeorganizing.com' at very bottom. "
+        "Small white text '<<L3>>'. Small white text 'lovelyhomepicks.com' at very bottom. "
         "Bold two-tone problem/solution Canva pin."
     ),
     # soft_aesthetic — sage/beige bg, centered product, elegant quote-style text
@@ -829,7 +819,7 @@ if False:
         "Large bold dark #263238 text '<<L1>>' below product, centered, elegant sans-serif. "
         "Thin green #81c784 decorative horizontal rule. "
         "Italic dark gray medium text '<<L2>>' — insight or quote style. "
-        "Small dark text '<<L3>>'. Small dark text 'smarthomeorganizing.com' at bottom. "
+        "Small dark text '<<L3>>'. Small dark text 'lovelyhomepicks.com' at bottom. "
         "Soft, aesthetic, Pinterest-worthy Canva style."
     ),
 }
@@ -915,7 +905,7 @@ FOR EACH PIN GENERATE:
        * SOFT/AESTHETIC → soft pastel bg matching product color palette, centered product, elegant italic text
        * SECOND LISTICLE → magazine cover style: full-bleed photo, white semi-transparent top + bottom bands
      - Include text overlays: describe EXACTLY what text appears where on the image, using line1/line2/line3 values
-     - Include: "Small text 'smarthomeorganizing.com' at bottom"
+     - Include: "Small text 'lovelyhomepicks.com' at bottom"
      - CONTRAST RULE: text color MUST contrast with background — use dark navy/charcoal text on white/light/pastel/soft backgrounds; use white text ONLY on dark backgrounds or when a dark gradient/overlay explicitly covers the text area
      - NO people, sharp focus, high resolution, professional photography/design
      - Each pin must have a VISUALLY DISTINCT prompt from all other 9 pins
@@ -951,7 +941,7 @@ RETURN ONLY VALID JSON — no explanation, no markdown fences
         "line3": "SHOP AMAZON NOW"
       }},
       "board": "{category}",
-      "freepik_prompt": "Pinterest pin, portrait 2:3, 1000x1500px. Background: full-bleed photorealistic lifestyle photo of slim stainless steel step trash can placed beside white lower kitchen cabinet, pull-out dual-bin trash organizer partially visible inside open cabinet door, warm natural window light from left, clean marble countertops, no people, styled minimal kitchen. Dark-to-transparent gradient overlay from bottom 55% upward. On gradient: bold large white uppercase sans-serif text '9 TRASH CANS TESTED' centered, letter-spacing 3px. White medium text 'FITS ANY KITCHEN SIZE' below. White small text 'SHOP AMAZON NOW' with right-arrow. Solid navy rounded-pill badge bottom center: small white text 'smarthomeorganizing.com'. High-resolution editorial lifestyle photography, Canva hero pin style."
+      "freepik_prompt": "Pinterest pin, portrait 2:3, 1000x1500px. Background: full-bleed photorealistic lifestyle photo of slim stainless steel step trash can placed beside white lower kitchen cabinet, pull-out dual-bin trash organizer partially visible inside open cabinet door, warm natural window light from left, clean marble countertops, no people, styled minimal kitchen. Dark-to-transparent gradient overlay from bottom 55% upward. On gradient: bold large white uppercase sans-serif text '9 TRASH CANS TESTED' centered, letter-spacing 3px. White medium text 'FITS ANY KITCHEN SIZE' below. White small text 'SHOP AMAZON NOW' with right-arrow. Solid navy rounded-pill badge bottom center: small white text 'lovelyhomepicks.com'. High-resolution editorial lifestyle photography, Canva hero pin style."
     }}
   ]
 }}"""
