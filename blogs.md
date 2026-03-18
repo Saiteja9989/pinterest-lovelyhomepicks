@@ -11,101 +11,101 @@
 |---|---|---|
 | 1 | 9 Best Area Rugs Under $150 That Look Way More Expensive (2026 Amazon Picks) | ✅ Done |
 | 2 | 7 Statement Throw Pillows That Will Transform Your Living Room in 2026 | ✅ Done |
-| 3 | The 8 Best Floor Lamps for Living Rooms — Ranked by Style and Brightness | ⬜ Pending |
-| 4 | 10 Designer Accent Chairs That Are Actually Worth Buying (Amazon 2026) | ⬜ Pending |
-| 5 | 6 Best Faux Plants That Look Incredibly Real — No Maintenance Required | ⬜ Pending |
+| 3 | 8 Best Floor Lamps That Interior Designers Use to Transform a Living Room | ✅ Done |
+| 4 | 10 Designer Accent Chairs That Are Actually Worth Buying (Amazon 2026) | ✅ Done |
+| 5 | 6 Best Large Faux Botanicals That Look Indistinguishable From Real Plants | ⬜ Pending |
 | 6 | 9 Large Statement Wall Art Pieces That Make a Real Design Impact | ⬜ Pending |
 | 7 | 7 Best Luxury Throw Blankets That Feel Like a Five-Star Hotel (Amazon 2026) | ⬜ Pending |
-| 8 | The 8 Best Boho Rugs for Bedroom and Living Room in 2026 | ⬜ Pending |
+| 8 | 8 Best Boho Area Rugs for Bedroom and Living Room That Anchor the Space | ⬜ Pending |
 | 9 | 10 Velvet Throw Pillows That Add Instant Luxury to Any Sofa | ⬜ Pending |
 | 10 | 7 Best Pendant Lights for Kitchen Islands That Look Custom-Installed | ⬜ Pending |
-| 11 | 8 Stunning Gallery Wall Sets That Come Ready to Hang | ⬜ Pending |
-| 12 | 6 Best Woven Baskets for Home Decor Storage and Styling | ⬜ Pending |
-| 13 | 9 Aesthetic Candles That Make Your Home Smell and Look Amazing | ⬜ Pending |
-| 14 | 7 Best Macrame Wall Hangings for Boho Home Decor in 2026 | ⬜ Pending |
+| 11 | 8 Stunning Gallery Wall Art Sets That Come Pre-Matched and Ready to Hang | ⬜ Pending |
+| 12 | 6 Best Storage Ottomans That Double as Coffee Tables and Extra Seating | ⬜ Pending |
+| 13 | 9 Best Ceramic and Reed Diffusers for a Beautifully Scented Luxury Home | ⬜ Pending |
+| 14 | 7 Best Oversized Textile and Fiber Art Pieces for Statement Walls | ⬜ Pending |
 | 15 | 10 Designer Table Lamps That Interior Designers Actually Recommend | ⬜ Pending |
-| 16 | 8 Best Outdoor Throw Pillows and Cushions for Patio Season 2026 | ⬜ Pending |
-| 17 | 7 Stunning Vases for Living Room Decor — From Ceramic to Glass | ⬜ Pending |
-| 18 | 9 Best Floating Shelves for Wall Decor and Display | ⬜ Pending |
-| 19 | 8 Beautiful Curtains That Make Any Room Look Taller and More Elegant | ⬜ Pending |
-| 20 | 6 Best Jute Rugs for a Natural Boho Aesthetic in Every Room | ⬜ Pending |
-| 21 | 10 Cozy Bedroom Decor Ideas — Products That Make Your Room Feel Like a Hotel | ⬜ Pending |
-| 22 | 7 Best Bar Stools for Kitchen Islands — Style Meets Comfort | ⬜ Pending |
-| 23 | 8 Modern Table Runners That Elevate Your Dining Table Instantly | ⬜ Pending |
-| 24 | 9 Best String Lights for Bedroom and Patio Ambiance | ⬜ Pending |
-| 25 | 7 Decorative Trays for Coffee Table Styling That Look Pinterest-Perfect | ⬜ Pending |
-| 26 | 8 Best Artificial Flowers and Stems for Home Decor Arrangements | ⬜ Pending |
+| 16 | 8 Best Outdoor Throw Pillows and Cushions for a Designer Patio Look | ⬜ Pending |
+| 17 | 7 Sculptural Vases That Look Like Gallery Art in Your Home | ⬜ Pending |
+| 18 | 9 Best Wall Shelving and Display Systems That Look Built-In | ⬜ Pending |
+| 19 | 8 Best Linen and Velvet Curtains That Interior Designers Swear By | ⬜ Pending |
+| 20 | 6 Best Large Jute and Woven Rugs That Ground Any Room With Natural Texture | ⬜ Pending |
+| 21 | 10 Best Bedroom Decor Pieces That Make Your Room Feel Like a Luxury Suite | ⬜ Pending |
+| 22 | 7 Best Bar Stools for Kitchen Islands That Look Like They Were Custom Made | ⬜ Pending |
+| 23 | 8 Best Linen Tablecloths and Napkin Sets for an Elevated Dining Experience | ⬜ Pending |
+| 24 | 9 Best Wall Sconces That Add Instant Ambiance to Any Room | ⬜ Pending |
+| 25 | 7 Best Coffee Tables That Anchor Your Living Room and Tie Everything Together | ⬜ Pending |
+| 26 | 8 Best Large Faux Botanical Arrangements for a Lush High-End Indoor Look | ⬜ Pending |
 | 27 | 10 Statement Boho Wall Decor Pieces That Transform a Bare Wall | ⬜ Pending |
-| 28 | 6 Best Rattan and Wicker Furniture Pieces for a Natural Home Aesthetic | ⬜ Pending |
-| 29 | 9 Aesthetic Desk Decor Items That Make Your Home Office Look Gorgeous | ⬜ Pending |
-| 30 | 7 Best Linen Duvet Covers for a Luxury Hotel Bedroom Look | ⬜ Pending |
-| 31 | 9 Best Peel and Stick Wallpaper Designs That Actually Look Real | ⬜ Pending |
-| 32 | 8 Cozy Bedroom Lighting Ideas — Lamps and String Lights That Set the Mood | ⬜ Pending |
-| 33 | 7 Best Woven Ottoman Coffee Tables for a Boho Living Room | ⬜ Pending |
+| 28 | 6 Best Rattan and Wicker Furniture Pieces That Bring Warmth to Any Home | ⬜ Pending |
+| 29 | 9 Best Home Office Furniture Pieces for a Stylish and Productive Workspace | ⬜ Pending |
+| 30 | 7 Best Linen Duvet Cover Sets That Make Your Bedroom Feel Like a Boutique Hotel | ⬜ Pending |
+| 31 | 9 Best Bedroom Storage Benches and Bed Benches That Add Style and Function | ⬜ Pending |
+| 32 | 8 Best Bedside Floor Lamps and Reading Lights That Set the Perfect Bedroom Mood | ⬜ Pending |
+| 33 | 7 Best Woven Ottoman Coffee Tables That Define a Stylish Boho Living Room | ⬜ Pending |
 | 34 | 10 Premium Amazon Home Decor Pieces That Are Genuinely Worth the Investment | ⬜ Pending |
-| 35 | 6 Best Ceramic Vases for Minimalist and Boho Home Styling | ⬜ Pending |
-| 36 | 9 Living Room Rug Ideas — The Best Sizes, Styles and Colors for 2026 | ⬜ Pending |
-| 37 | 8 Best Linen Curtains That Make Every Room Look Bright and Airy | ⬜ Pending |
-| 38 | 7 Stunning Dining Room Chandeliers Under $150 (Amazon 2026) | ⬜ Pending |
-| 39 | 9 Best Decorative Mirrors That Make Any Room Look Bigger | ⬜ Pending |
-| 40 | 8 Cozy Living Room Decor Sets — Everything You Need in One Bundle | ⬜ Pending |
+| 35 | 6 Best Statement Ceramic Pieces That Function as Both Sculpture and Decor | ⬜ Pending |
+| 36 | 9 Best Area Rug Styles for Living Rooms That Interior Designers Always Recommend | ⬜ Pending |
+| 37 | 8 Best Linen Curtains That Make Every Room Look Bright Airy and Expensive | ⬜ Pending |
+| 38 | 7 Show-Stopping Dining Room Chandeliers That Completely Define the Space | ⬜ Pending |
+| 39 | 9 Best Oversized Decorative Mirrors That Make Any Room Look Bigger and Brighter | ⬜ Pending |
+| 40 | 8 Best Complete Living Room Furniture Sets That Transform the Entire Space | ⬜ Pending |
 | 41 | 7 Best Rattan Pendant Lights for a Boho Kitchen or Dining Room | ⬜ Pending |
-| 42 | 10 Bedroom Wall Decor Ideas — Prints, Shelves and Art That Work | ⬜ Pending |
-| 43 | 8 Best Outdoor Lanterns for Patio and Garden Ambiance in 2026 | ⬜ Pending |
-| 44 | 6 Best Velvet Curtains That Add Drama and Luxury to Any Room | ⬜ Pending |
-| 45 | 9 Aesthetic Bedroom Decor Pieces Under $40 (Amazon 2026 Finds) | ⬜ Pending |
-| 46 | 7 Best Woven Wall Hangings for a Textured Boho Feature Wall | ⬜ Pending |
-| 47 | 8 Farmhouse Decor Pieces That Make Your Home Feel Warm and Lived-In | ⬜ Pending |
-| 48 | 10 Best Scented Candles for Home Decor That Actually Last Long | ⬜ Pending |
-| 49 | 9 Best Accent Tables and Side Tables for Living Rooms in 2026 | ⬜ Pending |
-| 50 | 7 Best Monstera and Tropical Faux Plants for Indoor Styling | ⬜ Pending |
-| 51 | 8 Modern Minimalist Decor Pieces That Keep Your Home Looking Clean | ⬜ Pending |
-| 52 | 6 Best Boho Throw Blankets — Chunky Knit, Woven and Fringe Styles | ⬜ Pending |
-| 53 | 9 Best Picture Ledge Shelves for Gallery Walls and Styling | ⬜ Pending |
-| 54 | 7 Best Outdoor String Lights for Patio Ambiance in 2026 | ⬜ Pending |
-| 55 | 10 Amazon Prime Home Decor Finds That Sold Out Last Year | ⬜ Pending |
-| 56 | 8 Best Linen Pillow Covers — Neutral, Textured and Affordable | ⬜ Pending |
-| 57 | 7 Stunning Entryway Decor Ideas — Console Tables, Mirrors and More | ⬜ Pending |
-| 58 | 9 Best Wax Melt Warmers and Wax Melts for Home Fragrance in 2026 | ⬜ Pending |
-| 59 | 8 Best Wall Sconces for Bedroom and Living Room Ambiance | ⬜ Pending |
-| 60 | 6 Best Natural Fiber Rugs — Jute, Seagrass and Sisal for 2026 | ⬜ Pending |
-| 61 | 9 Best Floating Corner Shelves for Small Space Styling | ⬜ Pending |
-| 62 | 7 Amazon Home Decor Dupes That Look Identical to Designer Pieces | ⬜ Pending |
-| 63 | 8 Best Rattan Furniture Pieces for a Coastal Boho Home in 2026 | ⬜ Pending |
-| 64 | 10 Cozy Fall Home Decor Pieces You Need for Your Living Room | ⬜ Pending |
-| 65 | 9 Best LED Strip Lights for Bedroom and Gaming Room Ambiance | ⬜ Pending |
-| 66 | 7 Best Dried Flower Arrangements for Boho Home Decor in 2026 | ⬜ Pending |
-| 67 | 8 Best Bathroom Wall Decor Pieces — Prints, Mirrors and Shelves | ⬜ Pending |
-| 68 | 6 Best Canopy Bed Curtains That Make Any Bedroom Look Dreamy | ⬜ Pending |
-| 69 | 9 Best Bamboo Blinds for a Natural Window Treatment Look | ⬜ Pending |
-| 70 | 7 Best Gallery Wall Frames Sets — Everything Pre-Matched and Ready | ⬜ Pending |
-| 71 | 8 Cottagecore Decor Pieces That Make Your Home Feel Like a Fairytale | ⬜ Pending |
-| 72 | 10 Best Amazon Diffusers for Home Fragrance and Aesthetic Vibes | ⬜ Pending |
-| 73 | 9 Best Accent Rugs for Bathroom, Bedroom and Entryway | ⬜ Pending |
-| 74 | 7 Best Marble and Gold Decor Accents for a Glam Home Aesthetic | ⬜ Pending |
-| 75 | 8 Best Indoor Planters and Pots for Styling Any Room in 2026 | ⬜ Pending |
-| 76 | 9 Best Linen Storage Bins and Baskets for Aesthetic Home Storage | ⬜ Pending |
-| 77 | 7 Best Decorative Bowls and Trays for Coffee Table and Shelf Styling | ⬜ Pending |
-| 78 | 8 Best Black and White Wall Art Sets for a Minimalist Home | ⬜ Pending |
-| 79 | 10 Best Coastal Decor Pieces for a Beach-Inspired Home in 2026 | ⬜ Pending |
-| 80 | 9 Best Neutral Throw Pillow Sets That Go with Any Couch Color | ⬜ Pending |
-| 81 | 7 Best Hanging Planters for Indoor and Outdoor Boho Styling | ⬜ Pending |
-| 82 | 8 Best Vintage-Inspired Decor Pieces That Look Antique (But Are New) | ⬜ Pending |
-| 83 | 9 Best Natural Wood Decor Accents for a Warm Organic Home Aesthetic | ⬜ Pending |
-| 84 | 6 Best Outdoor Patio Rugs That Handle Rain and Sun Without Fading | ⬜ Pending |
-| 85 | 10 Best Amazon Bedroom Decor Sets Under $100 for a Full Room Refresh | ⬜ Pending |
-| 86 | 7 Best Neon and LED Sign Lights for Bedroom and Office Walls | ⬜ Pending |
-| 87 | 8 Best Tapestry Wall Hangings for Bedroom and Dorm Room Decor | ⬜ Pending |
-| 88 | 9 Best Wicker and Rattan Baskets for Storage and Home Styling | ⬜ Pending |
-| 89 | 7 Best Floral Arrangements and Wreaths for Front Door and Entryway | ⬜ Pending |
-| 90 | 8 Best Decorative Lanterns for Indoor and Outdoor Home Decor | ⬜ Pending |
-| 91 | 10 Best Budget Bedroom Makeover Products Under $150 Total (Amazon 2026) | ⬜ Pending |
-| 92 | 9 Best Abstract Wall Art Prints for a Modern Living Room in 2026 | ⬜ Pending |
-| 93 | 7 Best Terrarium and Plant Display Stands for Indoor Styling | ⬜ Pending |
-| 94 | 8 Best Industrial Style Decor Pieces for a Modern Loft Aesthetic | ⬜ Pending |
-| 95 | 9 Best Neutral Color Palette Home Decor Sets for a Calm Aesthetic | ⬜ Pending |
-| 96 | 7 Best Outdoor Wicker Chairs and Loveseat Sets for Patio 2026 | ⬜ Pending |
-| 97 | 8 Best Minimalist Clock Designs for Living Room and Bedroom Walls | ⬜ Pending |
-| 98 | 10 Best Amazon Home Decor Trends for 2026 — What's Actually Worth Buying | ⬜ Pending |
-| 99 | 9 Best Japandi Decor Pieces for a Calm Minimalist Home Aesthetic | ⬜ Pending |
-| 100 | 7 Best Maximalist Decor Pieces That Make a Bold Statement in Any Room | ⬜ Pending |
+| 42 | 10 Best Large Bedroom Wall Art Pieces That Make a Dramatic Statement | ⬜ Pending |
+| 43 | 8 Best Outdoor Dining Sets for a Restaurant-Quality Patio Experience | ⬜ Pending |
+| 44 | 6 Best Floor-to-Ceiling Velvet Curtains That Add Drama and Depth to Any Room | ⬜ Pending |
+| 45 | 9 Luxury Bedroom Decor Pieces That Make Your Room Feel Like a Boutique Hotel | ⬜ Pending |
+| 46 | 7 Best Platform Beds and Upholstered Bed Frames That Make a Bedroom Statement | ⬜ Pending |
+| 47 | 8 Best Farmhouse Furniture Pieces That Give Your Home Authentic Warm Character | ⬜ Pending |
+| 48 | 10 Best Accent Chairs for Reading Nooks and Bedroom Corners You Will Never Want to Leave | ⬜ Pending |
+| 49 | 9 Best Accent Tables and Side Tables That Elevate Every Corner of Your Home | ⬜ Pending |
+| 50 | 7 Best Media Consoles and TV Stands That Look Like Custom Built-Ins | ⬜ Pending |
+| 51 | 8 Best Minimalist Living Room Furniture Pieces That Define a Clean and Calm Space | ⬜ Pending |
+| 52 | 6 Best Outdoor Sectional Sofas for a Luxurious Patio Lounge Setup | ⬜ Pending |
+| 53 | 9 Best Console and Entryway Tables That Make a Strong First Impression | ⬜ Pending |
+| 54 | 7 Best Outdoor Lounge Chairs and Chaise Lounges for Ultimate Patio Comfort | ⬜ Pending |
+| 55 | 10 Best Amazon Home Decor Pieces That Interior Designers Keep Recommending in 2026 | ⬜ Pending |
+| 56 | 8 Best Premium Linen and Velvet Pillow Combinations for a Perfectly Styled Sofa | ⬜ Pending |
+| 57 | 7 Best Entryway Consoles and Mirrors That Set the Tone for Your Entire Home | ⬜ Pending |
+| 58 | 9 Best Dining Chairs That Elevate Your Table Setting and Complete the Room | ⬜ Pending |
+| 59 | 8 Best Wall Sconces for Bedroom and Living Room That Replace Overhead Lighting | ⬜ Pending |
+| 60 | 6 Best Natural Fiber Rugs That Ground a Room With Organic Texture and Warmth | ⬜ Pending |
+| 61 | 9 Best Bookcases and Shelving Units That Work as Statement Furniture | ⬜ Pending |
+| 62 | 7 Best Luxury Home Decor Investments That Pay Off in Style and Quality | ⬜ Pending |
+| 63 | 8 Best Rattan and Coastal Furniture Pieces for a Relaxed High-End Home | ⬜ Pending |
+| 64 | 10 Best Dressers and Chests of Drawers That Look Like High-End Bedroom Furniture | ⬜ Pending |
+| 65 | 9 Best Blackout and Room-Darkening Curtains That Look Luxurious From the Outside | ⬜ Pending |
+| 66 | 7 Best Vanity Tables and Makeup Dressers That Make the Bedroom Feel Glamorous | ⬜ Pending |
+| 67 | 8 Best Bathroom Mirrors and Vanity Lighting Combos That Completely Upgrade the Room | ⬜ Pending |
+| 68 | 6 Best Upholstered Beds and Bed Frames That Make the Bedroom the Star of the Home | ⬜ Pending |
+| 69 | 9 Best Bar Carts and Drinks Trolleys for a Sophisticated Living or Dining Room | ⬜ Pending |
+| 70 | 7 Best Gallery Wall Frame Sets That Make a Bold Statement Without Looking Cluttered | ⬜ Pending |
+| 71 | 8 Best Cottagecore Furniture Pieces That Create a Romantic and Lived-In Aesthetic | ⬜ Pending |
+| 72 | 10 Best Bedroom Furniture Combinations for a Complete and Cohesive Room Design | ⬜ Pending |
+| 73 | 9 Best Large Area Rugs That Anchor a Room and Tie the Whole Aesthetic Together | ⬜ Pending |
+| 74 | 7 Best Marble and Brass Furniture Accents That Instantly Add Glamour to Your Home | ⬜ Pending |
+| 75 | 8 Best Plant Stands and Indoor Tiered Shelves for a Lush Botanical Interior | ⬜ Pending |
+| 76 | 9 Best Storage Cabinets and Sideboards That Blend Style With Smart Organization | ⬜ Pending |
+| 77 | 7 Best Dining Room Sideboards and Buffets That Add Storage and Serious Style | ⬜ Pending |
+| 78 | 8 Best Oversized Black and White Canvas Art Sets for a Dramatic Minimalist Wall | ⬜ Pending |
+| 79 | 10 Best Coastal Living Room Furniture Pieces for a Relaxed Beach House Aesthetic | ⬜ Pending |
+| 80 | 9 Best Designer-Style Throw Pillow Sets That Instantly Elevate Any Sofa or Bed | ⬜ Pending |
+| 81 | 7 Best Complete Outdoor Living Room Sets for an Elevated Backyard Space | ⬜ Pending |
+| 82 | 8 Best Vintage-Inspired Furniture Pieces That Add Timeless Character to Any Home | ⬜ Pending |
+| 83 | 9 Best Solid Wood Furniture Pieces That Are Built to Last and Look Better With Age | ⬜ Pending |
+| 84 | 6 Best Outdoor Patio Rugs That Handle the Elements Without Sacrificing Style | ⬜ Pending |
+| 85 | 10 Best Bedroom Furniture Sets for a Complete and Cohesive Room Transformation | ⬜ Pending |
+| 86 | 7 Best Sculptural and Abstract Wall Art Pieces That Work as Room Focal Points | ⬜ Pending |
+| 87 | 8 Best Upholstered Armchairs and Reading Chairs That Are as Stylish as They Are Comfortable | ⬜ Pending |
+| 88 | 9 Best Nightstands and Bedside Tables for Every Bedroom Style and Aesthetic | ⬜ Pending |
+| 89 | 7 Best Leaning and Full-Length Floor Mirrors That Add Instant Style to a Bedroom | ⬜ Pending |
+| 90 | 8 Best Outdoor Patio Furniture Sets for a Complete Backyard Transformation | ⬜ Pending |
+| 91 | 10 Best Bedroom Makeover Pieces That Change How Your Room Looks and Feels | ⬜ Pending |
+| 92 | 9 Best Large Abstract Canvas Art Pieces for a Sophisticated Modern Living Room | ⬜ Pending |
+| 93 | 7 Best Ottomans and Storage Benches That Work Beautifully in Any Room | ⬜ Pending |
+| 94 | 8 Best Industrial Furniture Pieces That Look Like They Were Custom Designed | ⬜ Pending |
+| 95 | 9 Best Neutral Living Room Furniture Combinations That Always Look Expensive | ⬜ Pending |
+| 96 | 7 Best Outdoor Wicker Chairs and Loveseat Sets for a Polished Patio in 2026 | ⬜ Pending |
+| 97 | 8 Best Minimalist Bedroom Furniture Pieces for a Serene and Uncluttered Sleep Space | ⬜ Pending |
+| 98 | 10 Best Statement Home Decor Investments That Are Worth Making in 2026 | ⬜ Pending |
+| 99 | 9 Best Japandi Furniture Pieces for a Calm and Sophisticated Home Aesthetic | ⬜ Pending |
+| 100 | 7 Best Maximalist Furniture and Decor Statements for a Bold and Unforgettable Home | ⬜ Pending |
