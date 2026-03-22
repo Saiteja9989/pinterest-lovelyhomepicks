@@ -14,7 +14,7 @@
 | 3 | 8 Best Floor Lamps That Interior Designers Use to Transform a Living Room | ✅ Done |
 | 4 | 10 Designer Accent Chairs That Are Actually Worth Buying (Amazon 2026) | ✅ Done|
 | 5 | 6 Best Large Faux Botanicals That Look Indistinguishable From Real Plants | ✅ Done |
-| 6 | 9 Large Statement Wall Art Pieces That Make a Real Design Impact | ⬜ Pending |
+| 6 | 9 Large Statement Wall Art Pieces That Make a Real Design Impact | ✅ Done |
 | 7 | 7 Best Luxury Throw Blankets That Feel Like a Five-Star Hotel (Amazon 2026) | ⬜ Pending |
 | 8 | 8 Best Boho Area Rugs for Bedroom and Living Room That Anchor the Space | ⬜ Pending |
 | 9 | 10 Velvet Throw Pillows That Add Instant Luxury to Any Sofa | ⬜ Pending |
