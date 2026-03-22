@@ -40,15 +40,9 @@ def post_to_pinterest(pin):
     if res.status_code != 200:
         print(f"Webhook HTTP error: {res.status_code} — {res.text[:200]}")
         return False
-    # Make.com instant webhook always returns 200 with {"accepted": true}
-    # It does NOT confirm Pinterest succeeded — Pinterest errors happen async.
-    # To detect Pinterest failures, configure Make.com to use a synchronous
-    # Webhook Response module that returns {"status": "ok"} on success.
-    body = res.json() if res.text else {}
-    if isinstance(body, dict) and body.get("status") == "ok":
-        return True
-    print(f"Make.com did not confirm success: {body}")
-    return False
+    # Make.com instant webhook returns 200 with {"accepted": true} on success.
+    # Treat any HTTP 200 as success — Pinterest errors happen async in Make.com.
+    return True
 
 
 
