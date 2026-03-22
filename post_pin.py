@@ -11,7 +11,7 @@ import json
 import requests
 from config import MAKE_WEBHOOK_URL
 
-QUEUE_FILE = 'pins_queue.json'
+QUEUE_FILE = 'pins_queue_new.json'
 
 
 def load_queue():

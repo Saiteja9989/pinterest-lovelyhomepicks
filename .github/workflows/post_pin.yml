@@ -54,18 +54,14 @@ jobs:
 
       - name: Post next pin
         env:
-          GROQ_API_KEY:            ${{ secrets.GROQ_API_KEY }}
-          FREEPIK_API_KEY:         ${{ secrets.FREEPIK_API_KEY }}
-          BLOGGER_BLOG_ID:         ${{ secrets.BLOGGER_BLOG_ID }}
-          MAKE_WEBHOOK_URL:        ${{ secrets.MAKE_WEBHOOK_URL }}
-          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
         run: python post_pin.py
 
-      - name: Commit updated pins_queue.json
+      - name: Commit updated pins_queue_new.json
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add pins_queue.json
+          git add pins_queue_new.json
           git diff --staged --quiet || git commit -m "Mark pin as posted [skip ci]"
           git push
