@@ -201,12 +201,16 @@ def suggest_queries(blog_title, count, max_price=None):
 
 def _suggest_queries_gemini(blog_title, count, max_price=None):
     """Gemini 2.5 Flash with Google Search grounding — finds real Amazon product names."""
-    price_note = f" priced under ${max_price:.0f}" if max_price else ""
+    price_note = f" All products must be priced under ${max_price:.0f}." if max_price else ""
     prompt = (
-        f'Search Amazon.com and list exactly {count} real product names{price_note} '
-        f'for this blog: "{blog_title}". '
-        f'Every product must be directly relevant to the blog topic. '
-        f'Return only a numbered list of exact Amazon product names, nothing else.'
+        f'Search Amazon.com and find exactly {count} DIFFERENT real product names for this blog: "{blog_title}".'
+        f'{price_note}'
+        f' Requirements:'
+        f' (1) Each product must be highly rated (4.0 stars or above) and sold on Amazon.'
+        f' (2) Prefer higher-priced products for better affiliate commission — avoid very cheap items under $20.'
+        f' (3) All {count} products must be distinct from each other — no duplicates.'
+        f' (4) Return ONLY a clean numbered list of exact Amazon product names — no explanations, no parentheses, no notes, no extra text.'
+        f' Format: 1. Product Name\n2. Product Name\n... up to {count}.'
     )
 
     r = requests.post(
@@ -216,7 +220,7 @@ def _suggest_queries_gemini(blog_title, count, max_price=None):
             "tools": [{"google_search": {}}],
             "generationConfig": {"temperature": 0.2}
         },
-        timeout=120
+        timeout=(10, 90)
     )
     r.raise_for_status()
 
@@ -229,7 +233,9 @@ def _suggest_queries_gemini(blog_title, count, max_price=None):
         m = re.match(r'^\d+[\.\)]\s*\*{0,2}(.+?)\*{0,2}$', line)
         if m:
             name = m.group(1).strip()
-            if name:
+            # Strip any parenthetical reasoning Gemini adds after the product name
+            name = re.sub(r'\s*\(.*', '', name).strip()
+            if name and len(name) > 5:
                 queries.append(name)
 
     if not queries:
@@ -241,12 +247,13 @@ def _suggest_queries_gemini(blog_title, count, max_price=None):
 
 def suggest_retry_query(blog_title, failed_query, used_queries, max_price=None):
     """Ask Gemini for ONE replacement Amazon product name when a slot fails."""
-    price_note = f" priced under ${max_price:.0f}" if max_price else ""
+    price_note = f" Must be priced under ${max_price:.0f}." if max_price else ""
     used_str = ", ".join(f'"{q}"' for q in used_queries)
     prompt = (
-        f'Search Amazon.com and find 1 real product name{price_note} for the blog: "{blog_title}". '
-        f'The following products already failed or were already used — do NOT suggest them: {used_str}. '
-        f'Return only the exact Amazon product name, nothing else.'
+        f'Search Amazon.com and find 1 real product name for this blog: "{blog_title}".'
+        f'{price_note}'
+        f' Requirements: highly rated (4.0+ stars), prefer higher-priced items for better commission, must be different from these already used: {used_str}.'
+        f' Return ONLY the exact Amazon product name — no explanations, no parentheses, no extra text.'
     )
 
     r = requests.post(
@@ -256,12 +263,14 @@ def suggest_retry_query(blog_title, failed_query, used_queries, max_price=None):
             "tools": [{"google_search": {}}],
             "generationConfig": {"temperature": 0.4}
         },
-        timeout=120
+        timeout=(10, 90)
     )
     r.raise_for_status()
     raw = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
     # Strip numbering if Gemini adds it
     raw = re.sub(r'^\d+[\.\)]\s*', '', raw)
+    # Strip any parenthetical reasoning
+    raw = re.sub(r'\s*\(.*', '', raw)
     return raw.strip()
 
 

@@ -909,8 +909,11 @@ FOR EACH PIN GENERATE:
        * PROBLEM/SOLUTION → bold warm red top band (THE PROBLEM), product photo center, sage green bottom band (THE SOLUTION)
        * SOFT/AESTHETIC → soft pastel or neutral bg matching product palette, centered product, elegant italic script text
        * SECOND LISTICLE → magazine cover style: full-bleed styled interior photo, white semi-transparent top + bottom bands
-     - Include text overlays: describe EXACTLY what text appears where on the image, using line1/line2/line3 values
-     - Include: "Small text 'lovelyhomepicks.com' at bottom"
+     - TEXT OVERLAYS — CRITICAL RULE: only write the EXACT string value in quotes, never add descriptions after it.
+       CORRECT: bold large white uppercase text "LIVING ROOM MAKEOVER" centered, medium white text "ONLY $38.99 ON AMAZON" below
+       WRONG: "AFTER in small white text in the bottom left corner, bold white sans-serif text" — NEVER write styling notes outside quotes
+       Use line1/line2/line3 values as the quoted text strings. Nothing else.
+     - Include: small text "lovelyhomepicks.com" at bottom center
      - CONTRAST RULE: text color MUST contrast with background — use dark navy/charcoal text on white/light/pastel/soft backgrounds; use white text ONLY on dark backgrounds or when a dark gradient/overlay explicitly covers the text area
      - NO people, sharp focus, high resolution, professional photography/design
      - Each pin must have a VISUALLY DISTINCT prompt from all other 9 pins

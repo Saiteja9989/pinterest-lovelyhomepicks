@@ -4,6 +4,4 @@ credentials.json
 __pycache__/
 *.pyc
 .venv/
-images/*.jpg
-images/*.png
 used_products.json

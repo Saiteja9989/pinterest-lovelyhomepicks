@@ -1,5 +1,42 @@
 {
-  "blog_number": 1,
-  "topic": "",
-  "products": []
+  "blog_number": 9,
+  "blog_title": "10 Velvet Throw Pillows That Add Instant Luxury to Any Sofa",
+  "category": "living",
+  "products": [
+    {
+      "name": "JUSPURBET Cream White Decorative Pillow Covers 20x20 Set of 2 Throw Pillow Covers for Couch Sofa Bed Cozy Velvet Cushion Covers Cases with Hidden Zipper for Living Room Home Decor",
+      "price": "$18.99",
+      "rating": "4.7",
+      "affiliate_link": "https://www.amazon.com/dp/B0C7VG5M86?tag=smarthomeorg-20",
+      "image_url": "https://m.media-amazon.com/images/I/71FXhvS8PWL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "JUSPURBET 18x18 Pillow Covers Set of 2 Decorative Throw Pillow Covers Case for Couch Sofa Bed Soft Velvet Cushion Covers with Hidden Zipper for Home Decor Living Room,Burnt Orange",
+      "price": "$15.99",
+      "rating": "4.8",
+      "affiliate_link": "https://www.amazon.com/dp/B0C7VDMK1V?tag=smarthomeorg-20",
+      "image_url": "https://m.media-amazon.com/images/I/71rF4jJzeWL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Aeckself European Luxury Velvet Throw Pillow Cover 18 x 18 Inch, Embroidery Floral Pillow Cover Home Decor Pillowcase for Couch Bedroom Living Room, Dark Emerald Green and Gold",
+      "price": "$16.99",
+      "rating": "4.8",
+      "affiliate_link": "https://www.amazon.com/dp/B0C3BFH2Q3?tag=smarthomeorg-20",
+      "image_url": "https://m.media-amazon.com/images/I/81M4LcwgVeL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "JUSPURBET 20x20 Pillow Covers Set of 2 Decorative Throw Pillow Covers Case for Couch Sofa Bed Soft Velvet Cushion Covers with Hidden Zipper for Home Decor Living Room,Olive",
+      "price": "$18.99",
+      "rating": "4.8",
+      "affiliate_link": "https://www.amazon.com/dp/B0C7VJM7TT?tag=smarthomeorg-20",
+      "image_url": "https://m.media-amazon.com/images/I/71VIJp4VxkL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "JUSPURBET 24x24 Throw Pillow Covers Set of 2 Decorative Pillow Covers for Couch Sofa Bed Cozy Velvet Cushion Covers Cases with Invisible Zipper for Living Room Home Decor,Eggplant Purple",
+      "price": "$24.69",
+      "rating": "4.8",
+      "affiliate_link": "https://www.amazon.com/dp/B0C7VBYRLZ?tag=smarthomeorg-20",
+      "image_url": "https://m.media-amazon.com/images/I/715et7HwlML._AC_SL1500_.jpg"
+    }
+  ]
 }
