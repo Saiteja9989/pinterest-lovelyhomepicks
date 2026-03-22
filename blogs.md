@@ -16,8 +16,8 @@
 | 5 | 6 Best Large Faux Botanicals That Look Indistinguishable From Real Plants | ✅ Done |
 | 6 | 9 Large Statement Wall Art Pieces That Make a Real Design Impact | ✅ Done |
 | 7 | 7 Best Luxury Throw Blankets That Feel Like a Five-Star Hotel (Amazon 2026) | ✅ Done |
-| 8 | 8 Best Boho Area Rugs for Bedroom and Living Room That Anchor the Space | ⬜ Pending |
-| 9 | 10 Velvet Throw Pillows That Add Instant Luxury to Any Sofa | ⬜ Pending |
+| 8 | 8 Best Boho Area Rugs for Bedroom and Living Room That Anchor the Space | ✅ Done |
+| 9 | 10 Velvet Throw Pillows That Add Instant Luxury to Any Sofa | ✅ Done |
 | 10 | 7 Best Pendant Lights for Kitchen Islands That Look Custom-Installed | ⬜ Pending |
 | 11 | 8 Stunning Gallery Wall Art Sets That Come Pre-Matched and Ready to Hang | ⬜ Pending |
 | 12 | 6 Best Storage Ottomans That Double as Coffee Tables and Extra Seating | ⬜ Pending |
