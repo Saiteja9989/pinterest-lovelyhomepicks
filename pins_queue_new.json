@@ -1922,7 +1922,7 @@
         "home_improvement"
       ],
       "category": "wall",
-      "image_url": "images\\blog6_pin7.jpg",
+      "image_url": "https://raw.githubusercontent.com/Saiteja9989/pinterest-automation/main/images/blog6_pin7.jpg",
       "posted": false,
       "blog_number": 6
     },
