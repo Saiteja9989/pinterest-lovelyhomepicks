@@ -33,6 +33,10 @@ on:
 
   workflow_dispatch:  # Allow manual trigger for testing
 
+concurrency:
+  group: post-pin
+  cancel-in-progress: false  # Queue runs, never cancel — prevents duplicate posts
+
 jobs:
   post_pin:
     runs-on: ubuntu-latest
