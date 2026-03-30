@@ -24,8 +24,8 @@
 | 13 | 9 Best Ceramic and Reed Diffusers for a Beautifully Scented Luxury Home | ✅ Done |
 | 14 | 7 Best Oversized Textile and Fiber Art Pieces for Statement Walls | ✅ Done |
 | 15 | 10 Designer Table Lamps That Interior Designers Actually Recommend | ✅ Done |
-| 16 | 8 Best Outdoor Throw Pillows and Cushions for a Designer Patio Look | ⬜ Pending |
-| 17 | 7 Sculptural Vases That Look Like Gallery Art in Your Home | ⬜ Pending |
+| 16 | 8 Best Outdoor Throw Pillows and Cushions for a Designer Patio Look | ✅ Done |
+| 17 | 7 Sculptural Vases That Look Like Gallery Art in Your Home | ✅ Done |
 | 18 | 9 Best Wall Shelving and Display Systems That Look Built-In | ⬜ Pending |
 | 19 | 8 Best Linen and Velvet Curtains That Interior Designers Swear By | ⬜ Pending |
 | 20 | 6 Best Large Jute and Woven Rugs That Ground Any Room With Natural Texture | ⬜ Pending |
