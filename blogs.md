@@ -28,7 +28,7 @@
 | 17 | 7 Sculptural Vases That Look Like Gallery Art in Your Home | ✅ Done |
 | 18 | 9 Best Wall Shelving and Display Systems That Look Built-In | ✅ Done |
 | 19 | 8 Best Linen and Velvet Curtains That Interior Designers Swear By | ✅ Done |
-| 20 | 6 Best Large Jute and Woven Rugs That Ground Any Room With Natural Texture | ⬜ Pending |
+| 20 | 6 Best Large Jute and Woven Rugs That Ground Any Room With Natural Texture | ✅ Done |
 | 21 | 10 Best Bedroom Decor Pieces That Make Your Room Feel Like a Luxury Suite | ⬜ Pending |
 | 22 | 7 Best Bar Stools for Kitchen Islands That Look Like They Were Custom Made | ⬜ Pending |
 | 23 | 8 Best Linen Tablecloths and Napkin Sets for an Elevated Dining Experience | ⬜ Pending |
