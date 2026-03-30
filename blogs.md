@@ -19,7 +19,7 @@
 | 8 | 8 Best Boho Area Rugs for Bedroom and Living Room That Anchor the Space | ✅ Done |
 | 9 | 10 Velvet Throw Pillows That Add Instant Luxury to Any Sofa | ✅ Done  |
 | 10 | 7 Best Pendant Lights for Kitchen Islands That Look Custom-Installed | ✅ Done |
-| 11 | 8 Stunning Gallery Wall Art Sets That Come Pre-Matched and Ready to Hang | ⬜ Pending |
+| 11 | 8 Stunning Gallery Wall Art Sets That Come Pre-Matched and Ready to Hang | ✅ Done |
 | 12 | 6 Best Storage Ottomans That Double as Coffee Tables and Extra Seating | ⬜ Pending |
 | 13 | 9 Best Ceramic and Reed Diffusers for a Beautifully Scented Luxury Home | ⬜ Pending |
 | 14 | 7 Best Oversized Textile and Fiber Art Pieces for Statement Walls | ⬜ Pending |
